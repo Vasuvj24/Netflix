@@ -3,6 +3,7 @@ import './Nav.css'
 function Nav() {
     // we wil use usestate here as when we scroll we need to change a variable we do it by usestate and then to add effect on variable change we use useeffect
     const [Show,handleShow] = useState(false);
+    // eslint-disable-next-line
     useEffect(() => {
         // we can use js here like window.event.addListener
         window.addEventListener('scroll',()=>{
@@ -19,6 +20,7 @@ function Nav() {
         return () => {
             window.removeEventListener('scroll');
         }
+    // eslint-disable-next-line
     },[])
   return (
     <div className={`nav ${Show && 'nav-black'}`}>
